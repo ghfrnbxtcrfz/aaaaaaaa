@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Django на METANIT.COM</title>
     <meta charset="utf-8" />
+    <title>Дискриминант</title>
 </head>
 <body>
-    <h2>Hello METANIT.COM</h2>
+    <h2>Расчет дискриминанта</h2>
+    <form method="post" action="calc_discriminant/">
+        {% csrf_token %}
+        <p>a: <br /> <input name="a" type="number" step="any" required /></p>
+        <p>b: <br /> <input name="b" type="number" step="any" required /></p>
+        <p>c: <br /> <input name="c" type="number" step="any" required /></p>
+        <input type="submit" value="Рассчитать" />
+    </form>
 </body>
 </html>
